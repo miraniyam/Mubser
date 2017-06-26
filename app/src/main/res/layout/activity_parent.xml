@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="16dp"
+    android:paddingLeft="16dp"
+    android:paddingRight="16dp"
+    android:paddingTop="16dp"
+
+    android:background="@drawable/bgp1">
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="200px"
+        android:id="@+id/Picking"
+        android:text="Picking"
+        android:textSize="30dp"
+        android:background="#d0d0d0"
+        android:layout_marginBottom="30dp"
+        android:layout_marginTop="30dp"
+        android:onClick="ClickPicking"
+
+        />
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="200px"
+        android:id="@+id/Tracking"
+        android:text="Tracking"
+        android:textSize="30dp"
+        android:background="#d0d0d0"
+        android:layout_marginBottom="30dp"
+        android:onClick="ClickTracking"
+
+        />
+
+
+</LinearLayout>

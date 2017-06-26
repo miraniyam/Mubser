@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="16dp"
+    android:paddingLeft="16dp"
+    android:paddingRight="16dp"
+    android:paddingTop="16dp"
+    android:background="@drawable/bgp1">
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="200px"
+        android:text="Current location"
+        android:id="@+id/MyLocation"
+        android:textSize="30dp"
+        android:background="#d0d0d0"
+        android:layout_marginBottom="10dp"
+        android:layout_marginTop="10dp"
+        android:onClick="ClickMyLocation"/>
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="200px"
+        android:id="@+id/Places"
+        android:text="List of Places"
+        android:textSize="30dp"
+        android:background="#d0d0d0"
+        android:layout_marginBottom="20dp"
+        android:layout_marginTop="20dp"
+        android:onClick="ClickList" />
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="200px"
+        android:text="Voice order"
+        android:id="@+id/VoiceOrder"
+        android:textSize="30dp"
+        android:background="#d0d0d0"
+        android:layout_marginBottom="20dp"
+        android:layout_marginTop="20dp"
+        android:onClick="ClickVoiceOrder"/>
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="200px"
+        android:id="@+id/Settings"
+        android:text="Settings"
+        android:textSize="30dp"
+        android:background="#d0d0d0"
+        android:layout_marginBottom="20dp"
+        android:layout_marginTop="10dp"
+        android:onClick="ClickSettings"
+
+        />
+
+
+</LinearLayout>
