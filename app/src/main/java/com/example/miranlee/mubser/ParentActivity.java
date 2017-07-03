@@ -33,4 +33,9 @@ public class ParentActivity extends AppCompatActivity {
         startActivity(intent);
 
     }
+
+    public void ClickBack(View v) {
+        startActivity(new Intent(this, MainActivity.class));
+        finish();
+    }
 }

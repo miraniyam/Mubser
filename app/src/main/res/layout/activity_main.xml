@@ -34,13 +34,13 @@ tools:context="com.example.miranlee.mubser.MainActivity"
     android:background="#d0d0d0"
     android:onClick="ClickUser"/>
 
-<Button
-    android:layout_width="match_parent"
-    android:layout_height="160px"
-    android:id="@+id/Lang"
-    android:text="العربية"
-    android:textSize="35dp"
-    android:background="#d0d0d0"
-    android:onClick="ClickLang"/>
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="160px"
+        android:id="@+id/Lang"
+        android:text="العربية"
+        android:textSize="35dp"
+        android:background="#d0d0d0"
+        android:onClick="ClickLang"/>
 
 </LinearLayout>

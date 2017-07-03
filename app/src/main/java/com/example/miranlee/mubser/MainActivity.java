@@ -40,17 +40,19 @@ public class MainActivity extends AppCompatActivity {
     public void ClickParent(View v) {
         Intent intent = new Intent(this, ParentActivity.class);
         startActivity(intent);
+        finish();
     }
 
     public void ClickUser(View v) {
         Intent intent = new Intent(this, UserActivity.class);
         startActivity(intent);
+        finish();
 
     }
     public void ClickLang(View v) {
         Intent intent = new Intent(this, MainpageArabic.class);
         startActivity(intent);
-
+        finish();
     }
 
 }
