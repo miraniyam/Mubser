@@ -50,8 +50,7 @@ public class SimpleScannerActivity extends AppCompatActivity implements ZXingSca
         String result = rawResult.getText();
         Intent intent = new Intent(this, PickingActivity.class);
         intent.putExtra("result",result);
-        setResult(RESULT_OK);
-        startActivityForResult(intent,REQUEST_CODE_QR_CODE);
+        setResult(RESULT_OK,intent);
         finish();
     }
 

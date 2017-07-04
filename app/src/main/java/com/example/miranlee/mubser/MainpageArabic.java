@@ -25,15 +25,19 @@ public class MainpageArabic extends AppCompatActivity {
     public void ClickParent1(View v) {
         Intent intent = new Intent(this, ParentActivity.class);
         startActivity(intent);
+        finish();
     }
 
     public void ClickUser1(View v) {
         Intent intent = new Intent(this, UserActivity.class);
         startActivity(intent);
+        finish();
     }
-        public void ClickLang1(View v) {
-            Intent intent = new Intent(this, MainActivity.class);
-            startActivity(intent);
-        }
+
+    public void ClickLang1(View v) {
+        Intent intent = new Intent(this, MainActivity.class);
+        startActivity(intent);
+        finish();
     }
+}
 

@@ -26,12 +26,13 @@ public class ParentActivity extends AppCompatActivity {
     public void ClickPicking(View v) {
         Intent intent = new Intent(this, PickingActivity.class);
         startActivity(intent);
+        finish();
 
     }
     public void ClickTracking(View v) {
         Intent intent = new Intent(this, TrackingActivity.class);
         startActivity(intent);
-
+        finish();
     }
 
     public void ClickBack(View v) {
