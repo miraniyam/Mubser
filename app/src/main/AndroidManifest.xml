@@ -68,6 +68,8 @@
             android:windowSoftInputMode="adjustResize"></activity>
         <activity android:name=".MainpageArabic"
             android:windowSoftInputMode="adjustResize"></activity>
+        <activity android:name=".CtrlTrackersActivity"
+            android:windowSoftInputMode="adjustResize"/>
     </application>
 
 </manifest>

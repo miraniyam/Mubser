@@ -32,4 +32,16 @@
         android:onClick="ClickCtrlS"
 
         />
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="200px"
+        android:id="@+id/ControlT"
+        android:text="Control Trackers"
+        android:textSize="30dp"
+        android:background="#d0d0d0"
+        android:layout_marginBottom="30dp"
+        android:onClick="ClickCtrlT"
+
+        />
 </LinearLayout>
