@@ -19,18 +19,19 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:textSize="20dp"
-            android:text="You need other user's code or QR code to track someone."/>
+            android:text="Let tracker knows where you are."/>
         <EditText
             android:layout_width="match_parent"
             android:layout_height="50dp"
-            android:hint="CODE"
+            android:hint="No one is chosen"
+            android:editable="false"
             android:textAlignment="center"
             android:id="@+id/user_code"/>
         <Button
             android:layout_width="match_parent"
             android:layout_height="50dp"
-            android:text="QR code"
-            android:id="@+id/btn_qr"
+            android:text="Choose your tracker"
+            android:id="@+id/btn_callbook"
             android:onClick="Click_qr"/>
     </LinearLayout>
 
