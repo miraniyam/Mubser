@@ -24,15 +24,20 @@
             android:layout_width="match_parent"
             android:layout_height="50dp"
             android:hint="No one is chosen"
-            android:editable="false"
             android:textAlignment="center"
-            android:id="@+id/user_code"/>
+            android:editable="false"
+            android:id="@+id/ChosenName"/>
         <Button
             android:layout_width="match_parent"
             android:layout_height="50dp"
             android:text="Choose your tracker"
             android:id="@+id/btn_callbook"
-            android:onClick="Click_qr"/>
+            android:onClick="Click_tracker"/>
+
+        <ListView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/trackerList"></ListView>
     </LinearLayout>
 
     <LinearLayout
@@ -45,7 +50,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="DONE!"
-            android:id="@+id/btn_done"/>
+            android:id="@+id/btn_done" />
 
     </LinearLayout>
 

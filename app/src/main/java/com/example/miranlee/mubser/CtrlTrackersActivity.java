@@ -1,11 +1,15 @@
 package com.example.miranlee.mubser;
 
 import android.content.Intent;
+import android.database.Cursor;
 import android.os.Bundle;
+import android.provider.ContactsContract;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ListView;
+import android.widget.TextView;
 import android.widget.Toast;
 
 /**
@@ -14,51 +18,49 @@ import android.widget.Toast;
 
 public class CtrlTrackersActivity extends AppCompatActivity {
 
-    public static final int REQUEST_CODE_QR_CODE=1000;
-
-    Button qr;
-    EditText user_code;
+    EditText tv;
+    String name;
+    String number;
+    ListView trackerList;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_ctrltrackers);
         setTitle("Control Trackers");
-        qr = (Button)findViewById(R.id.btn_qr);
-        user_code = (EditText)findViewById(R.id.user_code);
+        tv = (EditText) findViewById(R.id.ChosenName);
+        trackerList = (ListView)findViewById(R.id.trackerList);
+
+        name = null;
+        number = null;
     }
 
-    public void Click_qr(View v) {
-
-        Intent intent = new Intent(CtrlTrackersActivity.this, SimpleScannerActivity.class);
-
-        startActivityForResult(intent, REQUEST_CODE_QR_CODE);
-    }
-
+    @Override
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+        if(resultCode == RESULT_OK && requestCode == 0) {
+            Cursor c = getContentResolver().query(data.getData(), new String[] {
+                    ContactsContract.CommonDataKinds.Phone.DISPLAY_NAME,
+                    ContactsContract.CommonDataKinds.Phone.NUMBER
+            },null,null,null);
+            c.moveToFirst();
+            name = c.getString(0);
+            number = c.getString(1);
 
-        String code = data.getStringExtra("result");
-        user_code.setText(code);
-
-        switch (requestCode){
-            case REQUEST_CODE_QR_CODE:
-                if(resultCode==RESULT_OK){
-                    code = data.getStringExtra("result");
-                    user_code.setText(code);
-                }else {
-                    Toast.makeText(this, "Not Registered Code",Toast.LENGTH_SHORT).show();
-                }
-                break;
-            default:
-                super.onActivityResult(requestCode, resultCode, data);
         }
 
-
+        if(name != null && number != null) {
+            tv.setText(name+" ("+number+")");
+        }
+        super.onActivityResult(requestCode, resultCode, data);
     }
 
-    public void Click_done(View v) {
-
+    public void Click_tracker(View view) {
+        Intent i = new Intent(Intent.ACTION_PICK);
+        i.setData(ContactsContract.CommonDataKinds.Phone.CONTENT_URI);
+        startActivityForResult(i,0);
     }
 
+    public void Click_done(View view) {
 
+    }
 }
