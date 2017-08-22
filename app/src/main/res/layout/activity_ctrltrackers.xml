@@ -34,24 +34,17 @@
             android:id="@+id/btn_callbook"
             android:onClick="Click_tracker"/>
 
-        <ListView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:id="@+id/trackerList"></ListView>
-    </LinearLayout>
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_gravity="bottom"
-        android:layout_alignParentBottom="true">
         <Button
             android:onClick="Click_done"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="DONE!"
+            android:text="Add tracker to my list"
             android:id="@+id/btn_done" />
 
+        <ListView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/trackerList"></ListView>
     </LinearLayout>
 
 </RelativeLayout>

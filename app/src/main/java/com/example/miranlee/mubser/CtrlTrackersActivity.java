@@ -21,6 +21,7 @@ public class CtrlTrackersActivity extends AppCompatActivity {
     EditText tv;
     String name;
     String number;
+    Button done;
     ListView trackerList;
 
     @Override
@@ -30,9 +31,12 @@ public class CtrlTrackersActivity extends AppCompatActivity {
         setTitle("Control Trackers");
         tv = (EditText) findViewById(R.id.ChosenName);
         trackerList = (ListView)findViewById(R.id.trackerList);
+        done = (Button)findViewById(R.id.btn_done);
+        done.setClickable(false);
 
         name = null;
         number = null;
+
     }
 
     @Override
@@ -50,6 +54,7 @@ public class CtrlTrackersActivity extends AppCompatActivity {
 
         if(name != null && number != null) {
             tv.setText(name+" ("+number+")");
+            done.setClickable(true);
         }
         super.onActivityResult(requestCode, resultCode, data);
     }
